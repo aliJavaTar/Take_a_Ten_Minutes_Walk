@@ -4,7 +4,7 @@ public class TenMinWalk {
 
     public boolean isValid(char[] walk) {
 
-        if (isValidCharacter(walk) ) {
+        if (isValidCharacter(walk) && walk.length == 10) {
             return isThenMin(walk);
         } else return false;
     }
