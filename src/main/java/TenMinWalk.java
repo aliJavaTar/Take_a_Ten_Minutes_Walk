@@ -1,11 +1,12 @@
 import java.util.regex.Pattern;
 
 public class TenMinWalk {
+
     public boolean isValid(char[] walk) {
-        if (isValidCharacter(walk, walk.length)) {
+
+        if (isValidCharacter(walk) && walk.length == 10) {
             return isThenMin(walk);
         } else return false;
-
     }
 
     public boolean isThenMin(char[] walks) {
@@ -22,10 +23,10 @@ public class TenMinWalk {
         return alongNorth_South == 0 && widthWestEast == 0;
     }
 
-    public boolean isValidCharacter(char[] walk, int length) {
+    public boolean isValidCharacter(char[] walk) {
         String text = new String(walk);
         System.out.println(text);
         String regex = "[wnse]+";
-        return (Pattern.matches(regex, text) && length == 10);
+        return Pattern.matches(regex, text);
     }
 }
