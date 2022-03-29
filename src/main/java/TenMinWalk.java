@@ -4,7 +4,7 @@ public class TenMinWalk {
 
     public boolean isValid(char[] walk) {
 
-        if (isValidCharacter(walk) && walk.length == 10) {
+        if (isValidCharacter(walk) ) {
             return isThenMin(walk);
         } else return false;
     }
@@ -27,6 +27,6 @@ public class TenMinWalk {
         String text = new String(walk);
         System.out.println(text);
         String regex = "[wnse]+";
-        return Pattern.matches(regex, text);
+        return Pattern.matches(regex, text)&& walk.length == 10;
     }
 }
