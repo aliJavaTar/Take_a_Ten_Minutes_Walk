@@ -4,10 +4,12 @@ import java.util.regex.Pattern;
 public class TenMinWalk {
 
     public boolean isValid(char[] walk) {
-        validCharacter(walk, walk.length == 10));
-        if (walk.length == 10) {
+
+        if (validCharacter(walk, walk.length))
+        {
             int alongNorth_South = 0;
-            for (char walkChar : walk) {
+            for (char walkChar : walk)
+            {
                 if (walkChar == 'n')
                     alongNorth_South++;
                 else if (walkChar == 's')
@@ -18,16 +20,10 @@ public class TenMinWalk {
 
     }
 
-    Pattern pattern = Pattern.compile("w3schools");
-    Matcher matcher = pattern.matcher("Visit W3Schools!");
-
-    public boolean validCharacter(char[] walk, int length)
-
-    {
-        for (char walkCheek : walk) {
-
-        }
-        Pattern pattern = Pattern.compile("[wnse]");
-        Matcher matcher = pattern.matcher("Visit W3Schools!");
+    public boolean validCharacter(char[] walk, int length) {
+        String text = new String(walk);
+        System.out.println(text);
+        String regex = "[wnse]+";
+        return (Pattern.matches(regex, text) && length == 10);
     }
 }

@@ -55,5 +55,9 @@ class TenMinWalkTest {
         char[] walk3 = {'n', 'a', 'n', 'n', 'n', 's', 's', 'b', 's', 's'};
         boolean valid3 = tenMinWalk.isValid(walk3);
         assertFalse(valid3);
+
+        char[] walk4 = {'b', 'a', 'n', 'n', 'j', 's', 's', 'b', 's', 'f'};
+        boolean valid4 = tenMinWalk.isValid(walk4);
+        assertFalse(valid4);
     }
 }
