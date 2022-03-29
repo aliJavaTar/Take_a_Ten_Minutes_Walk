@@ -60,4 +60,40 @@ class TenMinWalkTest {
         boolean valid4 = tenMinWalk.isValid(walk4);
         assertFalse(valid4);
     }
+
+    @Test
+    public void WestAndEast() {
+        char[] walk1 = {'e', 'a', 'e', 'e', 'e', 'w', 'w', 'w', 'w', 'w'};
+        boolean valid1 = tenMinWalk.isValid(walk1);
+        assertFalse(valid1);
+
+
+        char[] walk2 = {'e', 'e', 'e', 'e', 'e', 'w', 'w', 'w', 'w', 'w'};
+        boolean valid2 = tenMinWalk.isValid(walk2);
+        assertTrue(valid2);
+
+        char[] walk3 = {'e', 'a', 'e', 'e', 'e', 'e', 'e', 'b', 'e', 'e'};
+        boolean valid3 = tenMinWalk.isValid(walk3);
+        assertFalse(valid3);
+
+        char[] walk4 = {'b', 'a', 'e', 'e', 'j', 'w', 'w', 'b', 'w', 'f'};
+        boolean valid4 = tenMinWalk.isValid(walk4);
+        assertFalse(valid4);
+    }
+
+    @Test
+    public void northAndSouthWestAndEast() {
+        char[] walk1 = {'w', 'w', 'e', 'e', 'n', 'n', 's', 's', 'w', 'w'};
+        boolean valid1 = tenMinWalk.isValid(walk1);
+        assertFalse(valid1);
+
+
+        char[] walk2 = {'w', 'w', 'w', 'e', 'e', 'e', 'n', 's', 'n', 's'};
+        boolean valid2 = tenMinWalk.isValid(walk2);
+        assertTrue(valid2);
+
+        char[] walk3 = {'e', 'e', 'e', 'e', 'e', 'e', 'e', 'w', 's', 's'};
+        boolean valid3 = tenMinWalk.isValid(walk3);
+        assertFalse(valid3);
+    }
 }
